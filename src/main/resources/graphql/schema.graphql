@@ -1,0 +1,25 @@
+# O ponto de exclamação (!) define que o campo é obrigatório.
+# Define os tipos que são os atributos e tipo do record Post e Comment
+
+type Post{
+    id : ID!
+    content: String!
+    comments: [Comment]
+}
+
+type Comment{
+    id : ID!
+    content: String!
+    postId: String
+}
+
+# Representa as operações criar, atualizar e deletar (type mutation - operações de escrita) e buscar por id (type query - operações de leitura)
+
+type Query{
+    postId(id: ID!) : Post
+}
+
+type Mutation{
+    createPost(content: String!) : [Post]
+    createComment(content: String!, postId: String!) : [Comment]
+}
