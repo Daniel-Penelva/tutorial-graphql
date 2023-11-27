@@ -31,6 +31,7 @@ class PostService {
     
 }
 
+
 @Service
 class CommentService {
     // Para salvar em memória
@@ -45,4 +46,9 @@ class CommentService {
 
         return comments.values();
     }
+
+    public Collection<Comment> findByPost(String id) {
+        return comments.values().stream().filter(comment -> comment.postId().equals(id)).toList();
+    }
+
 }
