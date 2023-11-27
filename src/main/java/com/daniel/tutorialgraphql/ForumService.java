@@ -25,7 +25,7 @@ class PostService {
 
 
     // Busca Post por id
-    Post postByid(String id){
+    Post postById(String id){
         return posts.get(id);
     }
     

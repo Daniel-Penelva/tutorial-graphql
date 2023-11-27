@@ -21,7 +21,8 @@ public class ForumController {
     //@SchemaMapping(typeName = "Query", value = "postByid")
     @QueryMapping
     public Post postById(@Argument String id){
-        return postService.postByid(id);
+        System.out.println("postById");
+        return postService.postById(id);
     }
 
     @MutationMapping

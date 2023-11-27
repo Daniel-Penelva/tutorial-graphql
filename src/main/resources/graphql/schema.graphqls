@@ -16,7 +16,7 @@ type Comment{
 # Representa as operações criar, atualizar e deletar (type mutation - operações de escrita) e buscar por id (type query - operações de leitura)
 
 type Query{
-    postId(id: ID!) : Post
+    postById(id: ID!) : Post
 }
 
 type Mutation{
